@@ -3,9 +3,9 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "pocasi";
-$spojeni = mysqli_connect($servername, $username, $password, $dbname);
-if($spojeni === false){
-    die("Error: Could not connect. ".$spojeni->connect_error);
+$connection = mysqli_connect($servername, $username, $password, $dbname);
+if($connection === false){
+    die("Error: Could not connect. ".$connection->connect_error);
 }
-mysqli_set_charset($spojeni, "utf8");
+mysqli_set_charset($connection, "utf8");
 ?>
