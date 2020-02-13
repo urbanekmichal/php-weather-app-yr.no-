@@ -2,7 +2,7 @@
 function getWeather($filename)
 {
     $xmlDoc = new DOMDocument();
-    $xmlDoc->load($filename);
+    $xmlDoc->load("./download-hour/$filename");
     $date = new DateTime();
     date_sub($date, date_interval_create_from_date_string('1 hour'));
     $new = date_format($date, 'Y-m-d\TH:m:s');

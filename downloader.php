@@ -19,6 +19,7 @@ function saveHourData($url, $filename, $connection)
     $result = mysqli_query($connection, $sql_update_change);
     if ($result) {
         echo $filename." downloaded";
+        mysqli_close($connection);
     }
 }
 
