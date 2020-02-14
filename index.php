@@ -1,6 +1,5 @@
 <?php
 require("connect.php");
-//require("downloader.php");
 ?>
 <!DOCTYPE html>
 <html lang="cs">
@@ -12,11 +11,8 @@ require("connect.php");
 <body>
 <?php
 
-//$getAllLocalities = "";
-//$saveWeatherdata = "";
-
-$sql = "select name_cz, filename from pocasi_lokality order by name_cz ASC";
-$res = mysqli_query($connection, $sql);
+$getAllLocalities = "SELECT name_cz, filename FROM pocasi_lokality ORDER BY name_cz ASC";
+$res = mysqli_query($connection, $getAllLocalities);
 
 if (mysqli_num_rows($res) > 0) {
     while ($row = mysqli_fetch_assoc($res)):
